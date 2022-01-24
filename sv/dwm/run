@@ -1,0 +1,8 @@
+#!/bin/execlineb -P
+fdmove -c 2 1
+s6-envdir env
+importas -D 0 -u DISPLAY DISPLAY
+export DISPLAY $DISPLAY
+s6-setuidgid jole
+cd /home/jole
+exec dwm
