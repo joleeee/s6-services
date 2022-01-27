@@ -1,0 +1,6 @@
+#!/bin/execlineb -P
+envfile /etc/s6/config/xdg.conf
+importas -i -u user user
+importas -i -u XDG_RUNTIME_DIR XDG_RUNTIME_DIR
+mkdir -p ${XDG_RUNTIME_DIR}
+chown ${user}:${user} ${XDG_RUNTIME_DIR}
