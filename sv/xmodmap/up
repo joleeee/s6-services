@@ -1,2 +1,0 @@
-#!/bin/execlineb -P
-xmodmap -display :0 /etc/X11/Xmodmap
