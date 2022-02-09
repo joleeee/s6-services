@@ -1,6 +1,6 @@
 #!/bin/execlineb -P
 fdmove -c 2 1
 s6-envdir env
-importas -D 0 -u DISPLAY DISPLAY
-importas -D 2 -u TTYN TTYN
+importas -i DISPLAY DISPLAY
+importas -i TTYN TTYN
 exec Xorg $DISPLAY -displayfd 3 -nolisten tcp -verbose 10 vt$TTYN
